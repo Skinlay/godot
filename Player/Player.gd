@@ -10,6 +10,10 @@ func _physics_process(delta):
 	if input_vector != Vector2.ZERO:
 		velocity = input_vector
 	else:
+		#velocity = Vector2.ZERO
+		pass
+	
+	if Input.is_action_pressed("ui_select"):
 		velocity = Vector2.ZERO
 		
 	move_and_collide(velocity)
